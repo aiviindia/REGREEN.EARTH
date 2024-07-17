@@ -1,17 +1,15 @@
-import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import NavBar from "./Components/NavBar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/Home";
+import Footer from "./Components/Footer";
 
 function App() {
-  Home;
-
   return (
     <>
+      <NavBar />
       <div>
-        <NavBar />
-        <Home />
+        <Outlet />
       </div>
+      <Footer />
     </>
   );
 }
