@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "./Components/HeroSection";
 import Leaves from "../Home/Assets/LeavesBG.png";
 import ImageCarousel from "./Components/ImageCrousal";
+import SmallCard from "./Components/SmallCard";
 
 const Home = () => {
   const images = [
@@ -9,14 +10,15 @@ const Home = () => {
       id: "1",
       url: "",
       text: "",
+      title: "",
     },
   ];
 
   return (
-    <div className="bg-black">
+    <div className="bg-black flex gap-10 flex-col">
       <HeroSection />
-      <div className='w-full bg-[url("./assets/LeavesBG.png")]'>
-        <div className="flex flex-col p-10 py-10  text-white font-semibold text-xl space-y-6">
+      <div className='w-full bg-[url("./assets/LeavesBG.png")] rounded-tl-[150px] rounded-br-[150px] rounded-xl'>
+        <div className="flex flex-col p-10 py-10  text-white font-semibold text-xl space-y-6 ">
           <div className="space-y-6 backdrop-blur-lg py-4 px-4 rounded-xl">
             <h1 className="text-2xl">
               Welcome to Regreenation Labs, where innovation meets
@@ -56,6 +58,13 @@ const Home = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex items-center justify-center py-10 ">
+        <SmallCard
+          image={"https://lorempic.com/400/400"}
+          number={"10,000+"}
+          title={"tree plantation"}
+        />
       </div>
     </div>
   );

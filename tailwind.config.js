@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
       },
+      borderRadius: {
+        "custom-tl": "20px 60px",
+      },
     },
   },
   plugins: [],
