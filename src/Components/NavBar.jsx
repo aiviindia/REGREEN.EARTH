@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className='w-full h-[1rem] bg-[url("./assets/LeavesBG.png")]'></div>
+      {/* <div className='w-full h-[1rem] bg-[url("./assets/LeavesBG.png")]'></div> */}
       <div className="flex justify-between bg-black text-[#39B54A] p-6 py-8 text-xl">
         <div>Regreenation Labs</div>
         <ul className="flex list-none gap-8">
@@ -33,7 +33,7 @@ const NavBar = () => {
         </ul>
         <div>Login</div>
       </div>
-      <div className='w-full h-[0.1rem] bg-[url("./assets/LeavesBG.png")]'></div>
+      {/* <div className='w-full h-[0.1rem] bg-[url("./assets/LeavesBG.png")]'></div> */}
     </div>
   );
 };

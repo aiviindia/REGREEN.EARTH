@@ -11,7 +11,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=' bottom-0 left-0 w-full h-52 bg-[url("./assets/LeavesBG.png")]'>
+    <div className=" bottom-0 left-0 w-full h-52 bg-black ">
+      <div className="w-full h-[1px]  bg-gray-600 "> </div>
       <div className="flex flex-col items-center justify-center py-6  text-white">
         <p className="font-extrabold text-3xl"> Follow us on our socials</p>
         <div className="flex gap-5 py-6">
@@ -27,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <Mail />
-            <p>regreenationLabs@gmail.com</p>
+            <p>regreenationlabs@gmail.com</p>
           </div>
         </div>
       </div>

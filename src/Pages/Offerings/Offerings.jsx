@@ -1,7 +1,7 @@
 import React from "react";
 
 const Offerings = () => {
-  return <div>Offerings</div>;
+  return <div className="bg-black">Offerings</div>;
 };
 
 export default Offerings;

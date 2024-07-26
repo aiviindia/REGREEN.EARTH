@@ -1,5 +1,7 @@
 import React from "react";
 import BlogCard from "./Components/BlogCard";
+import ImageCarousel from "../../Components/ImageCarosel";
+import TextImageSlider from "../../Components/TextImageSlider";
 
 const blogs = [
   {
@@ -51,7 +53,9 @@ const blogs = [
     text: "Traveling doesn’t have to be expensive. Learn how to explore the world without breaking the bank with these budget-friendly travel tips.",
   },
 ];
-
+const images = blogs.map((blog) => blog.image);
+const texts = blogs.map((blog) => blog.text);
+const title = blogs.map((blog) => blog.title);
 const Blogs = () => {
   return (
     <div className="bg-black px-24">
@@ -59,7 +63,9 @@ const Blogs = () => {
         {" "}
         Featured Blogs{" "}
       </div>
-      <div className="bg-white w-full h-[500px]"></div>
+      <div className="backdrop-blur-3xl bg-white w-full h-[500px]">
+        <TextImageSlider images={images} texts={texts} title={title} />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-20 ">
         {blogs.map((blog) => (
           <BlogCard
