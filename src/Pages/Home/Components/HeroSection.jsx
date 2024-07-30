@@ -7,9 +7,9 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className=" flex relative w-full  ">
+    <div className=" flex flex-col relative w-full  ">
       <video
-        className="w-full opacity-30 "
+        className="w-full opacity-30 h-[50rem]"
         autoPlay
         loop
         muted
