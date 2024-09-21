@@ -6,16 +6,33 @@ import SmallCard from "./Components/SmallCard";
 import OfferingsSection from "./Components/OfferingsSection";
 import PartnersMarquee from "./Components/PartnersMarquee";
 import SuccessCard from "./Components/SuccessCard";
-
+import Skewbar from "../../Components/Skewbar";
+import Button from "../../Components/Button";
+import OfferingsCards from "./Components/OfferingsCards";
+import Industry from "./Components/ Industry";
+import { useNavigate } from "react-router-dom";
+import AliceCarousel from "react-alice-carousel";
 const Home = () => {
-  const images = [
-    {
-      id: "1",
-      url: "",
-      text: "",
-      title: "",
-    },
+  const navigate = useNavigate();
+
+  const items = [
+    <div className="item" data-value="1">
+      <img src="https://lorempic.com/640/480" alt="" />
+    </div>,
+    <div className="item" data-value="2">
+      <img src="https://lorempic.com/640/480" alt="" />
+    </div>,
+    <div className="item" data-value="3">
+      <img src="https://lorempic.com/640/480" alt="" />
+    </div>,
+    <div className="item" data-value="4">
+      <img src="https://lorempic.com/640/480" alt="" />
+    </div>,
+    <div className="item" data-value="5">
+      <img src="https://lorempic.com/640/480" alt="" />
+    </div>,
   ];
+
   const reviews = [
     {
       title: "Abhay Pratap Singh",
@@ -31,67 +48,51 @@ const Home = () => {
       content:
         "The consultancy services provided by Regreenation were top-notch. They guided us through the process of implementing sustainable practices effectively.",
     },
-    {
-      title: "Ravi Kumar",
-      image: "https://picsum.photos/200",
-      ratings: "5",
-      content:
-        "Regreenation Labs' advanced technology solutions have transformed our business operations, making them more efficient and eco-friendly.",
-    },
+  ];
+
+  // Array for OfferingsCards rows
+  const offeringsRows = [
+    { marginClass: "" },
+    { marginClass: "mr-32" },
+    { marginClass: "mr-64" },
   ];
 
   return (
-    <div className="bg-black  flex flex-col">
+    <div className="bg-black flex flex-col px-[8rem] gap-[8rem]">
       <HeroSection />
-      <div className="flex justify-center py-10 items-center font-bold text-5xl text-[#39B54A]">
-        About Us
-      </div>
-      <div className='w-full bg-[url("./assets/LeavesBG.png")] rounded-tl-[150px] rounded-br-[150px] rounded-xl'>
-        <div className="flex flex-col px-20 py-10  text-white text-xl space-y-6 ">
-          <div className="space-y-6 backdrop-blur-lg py-4 px-4 rounded-xl">
-            <h1 className="text-2xl">
-              Welcome to Regreenation Labs, where innovation meets
-              sustainability
-            </h1>
-            <p>
-              At Regreenation Labs, we are committed to creating a better world
-              through cutting-edge technology solutions designed with the planet
-              in mind. Our mission is to empower businesses and communities to
-              embrace sustainability by integrating environmentally friendly
-              practices and technologies into everyday operations.
-            </p>
-            <p>
-              From developing state-of-the-art renewable energy systems to
-              designing eco-friendly infrastructure, Regreenation Labs is at the
-              forefront of the sustainability movement. Our solutions are
-              tailored to meet the unique needs of each client, ensuring that
-              sustainability is seamlessly woven into the fabric of their
-              operations.
-            </p>
-            <p>
-              We are passionate about fostering a culture of sustainability and
-              innovation. Through our consultancy services, we provide strategic
-              insights, cutting-edge technology, and hands-on support to help
-              businesses transition to greener practices. Whether you are a
-              startup looking to build a sustainable foundation or an
-              established company aiming to enhance your environmental
-              performance, Regreenation Labs is your trusted partner in the
-              quest for sustainability.
-            </p>
-            <p>
-              Join us in our mission to create a sustainable future. Together,
-              we can innovate, inspire, and implement solutions that not only
-              protect our planet but also create a thriving, sustainable economy
-              for generations to come. Explore the endless possibilities with
-              Regreenation Labs – where technology meets sustainability.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p className="flex justify-center py-12 items-center font-bold text-5xl text-[#39B54A]">
-          Why us?
+      <section>
+        <Skewbar title="Our Services" />
+        <p className="text-white text-lg w-[840px]">
+          Regreenation Labs offers expert consulting in sustainability, advanced
+          technology integration, and eco-friendly solutions. We help businesses
+          reduce waste, optimize operations, and implement green practices for a
+          sustainable future.
         </p>
+        <div className="py-5">
+          <Button
+            onclick={() => navigate("/Offerings")}
+            background="bg-green-600"
+            textColor="text-white-600 hover:text-black"
+            text="Know more"
+            textsize="text-xl"
+            rounded="rounded-full"
+          />
+        </div>
+        <div className="flex flex-col gap-10 my-10">
+          {offeringsRows.map((row, index) => (
+            <div
+              key={index}
+              className={`flex justify-end gap-10 ${row.marginClass}`}
+            >
+              <OfferingsCards />
+              <OfferingsCards />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div>
+        <Skewbar title="Working with us" />
         <div className="flex items-center justify-center py-12 gap-[8rem]">
           <SmallCard
             image={"https://lorempic.com/400/400"}
@@ -112,18 +113,15 @@ const Home = () => {
       </div>
 
       <div>
-        <p className="flex justify-center py-12 items-center font-bold text-5xl text-[#39B54A]">
-          Services we offer
-        </p>
-        <div className="flex justify-center ">
-          <OfferingsSection />
+        <Skewbar title="Industries" />
+        <div>
+          <Industry />
         </div>
       </div>
+
       <div>
-        <p className="flex justify-center py-12 items-center font-bold text-5xl text-[#39B54A]">
-          Success stories
-        </p>
-        <div className="flex  justify-center gap-16 py-5">
+        <Skewbar title="Why Us?" />
+        <div className="flex justify-center gap-16 py-5 flex-wrap">
           {reviews.map((item, index) => (
             <div key={index}>
               <SuccessCard
@@ -136,13 +134,23 @@ const Home = () => {
           ))}
         </div>
       </div>
+
       <div>
-        <p className="flex justify-center py-12 items-center font-bold text-5xl text-[#39B54A]">
-          Our trusted partners and Clients
-        </p>
-        <div>
-          <PartnersMarquee />
-        </div>
+        <Skewbar title="Our Work" />
+        <AliceCarousel
+          items={items}
+          autoPlay
+          autoPlayStrategy="none"
+          autoPlayInterval={3000}
+          animationDuration={1000}
+          animationType="fadeout"
+          infinite
+          touchTracking={false}
+          disableDotsControls
+          disableButtonsControls
+          autoHeight
+          autoWidth
+        />
       </div>
     </div>
   );
