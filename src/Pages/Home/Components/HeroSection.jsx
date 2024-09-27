@@ -10,7 +10,7 @@ const HeroSection = () => {
     <div className="flex items-center justify-between  py-10">
       <div className="flex flex-col gap-5 text-2xl text-white">
         <div className="font-bold text-[48px] leading-none text-green-600">
-          Regreenation Labs
+          aivi Labs
         </div>
         <p className="text-[28px]">sustinable cutting edge technology</p>
         <div className="flex gap-5">

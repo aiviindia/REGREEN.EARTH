@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="flex items-center justify-between bg-black text-[#39B54A] px-[6rem] py-8 text-xl">
         <div className="flex items-center gap-5">
           <img width={100} height={100} src="/headerlogo.png" alt="" />
-          <div>Regreenation Labs</div>
+          <div>aivi Labs</div>
         </div>
         <ul className="flex list-none gap-8">
           {navItems.map((item, index) => (

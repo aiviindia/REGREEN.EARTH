@@ -39,14 +39,14 @@ const Home = () => {
       image: "https://picsum.photos/200",
       ratings: "5",
       content:
-        "Working with Regreenation has really helped us in many ways. We are able to reduce our waste production by 50% and save more on other resources.",
+        "Working with aivi has really helped us in many ways. We are able to reduce our waste production by 50% and save more on other resources.",
     },
     {
       title: "Nisha Sharma",
       image: "https://picsum.photos/200",
       ratings: "4",
       content:
-        "The consultancy services provided by Regreenation were top-notch. They guided us through the process of implementing sustainable practices effectively.",
+        "The consultancy services provided by aivi were top-notch. They guided us through the process of implementing sustainable practices effectively.",
     },
   ];
 
@@ -63,7 +63,7 @@ const Home = () => {
       <section>
         <Skewbar title="Our Services" />
         <p className="text-white text-lg w-[840px]">
-          Regreenation Labs offers expert consulting in sustainability, advanced
+          aivi Labs offers expert consulting in sustainability, advanced
           technology integration, and eco-friendly solutions. We help businesses
           reduce waste, optimize operations, and implement green practices for a
           sustainable future.

@@ -62,16 +62,16 @@ const AboutUs = () => {
         </p>
         <div className=" flex ">
           <div className="text-white text-xl w-[50%] p-10">
-            Regreenation Labs is dedicated to transforming businesses with
-            sustainable solutions and cutting-edge technology. Our mission is to
-            reduce waste production and promote eco-friendly practices. Since
-            our inception, we've partnered with companies to implement
-            strategies that not only benefit the environment but also enhance
-            operational efficiency. Our expert team combines innovation with a
-            passion for sustainability, ensuring our clients lead the way in
-            green business practices. Join us in our journey to create a greener
-            future, one sustainable step at a time. Together, we can make a
-            lasting impact on our planet.
+            aivi Labs is dedicated to transforming businesses with sustainable
+            solutions and cutting-edge technology. Our mission is to reduce
+            waste production and promote eco-friendly practices. Since our
+            inception, we've partnered with companies to implement strategies
+            that not only benefit the environment but also enhance operational
+            efficiency. Our expert team combines innovation with a passion for
+            sustainability, ensuring our clients lead the way in green business
+            practices. Join us in our journey to create a greener future, one
+            sustainable step at a time. Together, we can make a lasting impact
+            on our planet.
           </div>
           <div className="w-[50%] h-full p-10">
             <AliceCarousel

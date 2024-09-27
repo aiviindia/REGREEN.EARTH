@@ -51,7 +51,7 @@ const Footer = () => {
       text-white text-3xl
       absolute rounded-xl bg-[#39B54A] w-[60%]  right-0 h-[4rem]"
       >
-        Regreenation Labs
+        aivi
       </div>
       <div className="flex flex-col pt-24 px-40 w-full gap-14 items-center justify-center">
         <div className="flex gap-32">
@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center items-center opacity-50 text-white py-4">
-        &copy; 2024 Regreenation Labs. All rights reserved.
+        &copy; 2024 aivi. All rights reserved.
       </div>
     </div>
   );
