@@ -1,4 +1,9 @@
 import React from "react";
+import bankimage from "../Assets/industries/bank.png";
+import coprate from "../Assets/industries/coprate.png";
+import manufacture from "../Assets/industries/manufacture.png";
+import realstate from "../Assets/industries/realstate.png";
+import others from "../Assets/industries/others.png";
 
 // Section Component
 const Section = ({ image, title, isImageLeft }) => {
@@ -27,23 +32,23 @@ const Industry = () => {
   // Data array
   const data = [
     {
-      image: "src/Pages/Home/Assets/industries/bank.png",
+      image: `${bankimage}`,
       title: "Banking",
     },
     {
-      image: "src/Pages/Home/Assets/industries/coprate.png",
+      image: `${coprate}`,
       title: "Corporate",
     },
     {
-      image: "src/Pages/Home/Assets/industries/manufacture.png",
+      image: `${manufacture}`,
       title: "Manufacturing",
     },
     {
-      image: "src/Pages/Home/Assets/industries/realstate.png",
+      image: `${realstate}`,
       title: "Real-Estate",
     },
     {
-      image: "src/Pages/Home/Assets/industries/others.png",
+      image: `${others}`,
       title: "Many Others",
     },
   ];
